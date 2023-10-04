@@ -11,4 +11,15 @@
     'sequence': 1,
     'installable': True,
     'application': True,
+
+    'assets': {
+        'web.assets_backend': [
+
+            # Jalali Date and Datetime
+            'arad_jalali_toolkit/static/src/lib/**/*',
+            'arad_jalali_toolkit/static/src/components/persianDatepicker/**/*',
+            'arad_jalali_toolkit/static/src/components/persianDateField/**/*',
+            'arad_jalali_toolkit/static/src/components/persianDateTimeField/**/*',
+        ],
+    },
 }
