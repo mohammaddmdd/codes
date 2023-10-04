@@ -1,3 +1,7 @@
+# Customs
+conf/
+odoo/
+
 # Created by https://www.toptal.com/developers/gitignore/api/pycharm,visualstudiocode,virtualenv,python
 # Edit at https://www.toptal.com/developers/gitignore?templates=pycharm,visualstudiocode,virtualenv,python
 
@@ -318,3 +322,4 @@ pip-selfcheck.json
 .ionide
 
 # End of https://www.toptal.com/developers/gitignore/api/pycharm,visualstudiocode,virtualenv,python
+/conf/odoo.conf
