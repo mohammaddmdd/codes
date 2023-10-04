@@ -20,6 +20,9 @@
             'arad_jalali_toolkit/static/src/components/persianDatepicker/**/*',
             'arad_jalali_toolkit/static/src/components/persianDateField/**/*',
             'arad_jalali_toolkit/static/src/components/persianDateTimeField/**/*',
+
+            # Jalali Calendar Module
+            'arad_jalali_toolkit/static/src/views/**/*',
         ],
     },
 }
