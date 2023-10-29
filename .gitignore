@@ -321,6 +321,8 @@ pip-selfcheck.json
 
 
 # Customs
+.vs
+
 conf/
 odoo/
 !custom_addons/*/static/lib
