@@ -6,7 +6,7 @@
     "license": "LGPL-3",
     'summary': 'Odoo Jalali Localization',
     "description": 'Jalali localization for date, datetime and daterange fields and calendar module',
-    "depends": ['base', 'web', 'calendar'],
+    "depends": ['base', 'web'],
     'category': 'Productivity',
     'sequence': 1,
     'installable': True,
@@ -23,6 +23,9 @@
 
             # Jalali Calendar Module
             'arad_jalali_toolkit/static/src/views/**/*',
+
+            # Jalali Daterange field
+            'arad_jalali_toolkit/static/src/views/fields/**/*'
         ],
     },
 }
