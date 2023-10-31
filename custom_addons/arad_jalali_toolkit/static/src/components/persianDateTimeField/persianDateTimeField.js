@@ -59,5 +59,5 @@ PersianDateTimeField.extractProps = ({ attrs }) => {
         placeholder: attrs.placeholder,
     };
 };
-registry.category("fields").remove("datetime");
-registry.category("fields").add("datetime", PersianDateTimeField);
+// registry.category("fields").remove("datetime");
+// registry.category("fields").add("datetime", PersianDateTimeField);
