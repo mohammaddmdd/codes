@@ -17,7 +17,8 @@ export class PersianDatePicker extends DatePicker {
             locale: null,
             format: "YYYY/MM/DD",
             monthYearSeparator: '/',
-            weekDays: null
+            weekDays: null,
+            calendarPosition: 'auto'
         })
 
         onWillStart(async () => {
