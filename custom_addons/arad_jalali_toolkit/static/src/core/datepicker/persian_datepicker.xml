@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+
+    <t t-name="arad_jalali_toolkit.PersianDatePicker" owl="1">
+
+        <div t-ref="input"
+             t-att-id="props.inputId"
+             class="o_datepicker_input o_input datetimepicker-input"
+             t-att-readonly="props.readonly"
+        />
+
+    </t>
+
+</templates>

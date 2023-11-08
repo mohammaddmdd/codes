@@ -6,11 +6,11 @@ import { areDateEquals } from "@web/core/l10n/dates";
 import { loadJS } from "@web/core/assets";
 import { onWillStart } from "@odoo/owl";
 
-import { DateTimeField } from "@web/views/fields/datetime/datetime_field";
-import { PersianDateTimePicker } from "../../../core/datepicker/persian_datepicker";
+import { DateField } from "@web/views/fields/date/date_field";
+import { PersianDatePicker } from "../../../core/datepicker/persian_datepicker";
 
 
-export class PersianDateTimeField extends DateTimeField {
+export class PersianDateField extends DateField {
 
     setup() {
         super.setup()
@@ -28,19 +28,19 @@ export class PersianDateTimeField extends DateTimeField {
     }
 
     get formattedValue() {
-        return persianDate.unix(this.props.value.ts / 1000).format('YYYY/MM/D HH:mm');
+        return persianDate.unix(this.props.value.ts / 1000).format('YYYY/MM/D');
     }
 
 }
 
-PersianDateTimeField.template = 'arad_jalali_toolkit.PersianDateTimeField'
-PersianDateTimeField.components = {
-    PersianDateTimePicker
+PersianDateField.template = 'arad_jalali_toolkit.PersianDateField'
+PersianDateField.components = {
+    PersianDatePicker
 }
-PersianDateTimeField.props = {
-    ...DateTimeField.props
+PersianDateField.props = {
+    ...DateField.props
 }
 
 
-registry.category("fields").remove("datetime")
-registry.category("fields").add("datetime", PersianDateTimeField)
+registry.category("fields").remove("date")
+registry.category("fields").add("date", PersianDateField)
