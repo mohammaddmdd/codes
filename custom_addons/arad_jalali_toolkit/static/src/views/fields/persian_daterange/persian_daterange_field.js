@@ -22,6 +22,8 @@ export class PersianDateRangeField extends DateRangeField {fonts
             await loadJS("/arad_jalali_toolkit/static/lib/jalali_moment/jalali-moment.browser.js")
             await loadJS('/arad_jalali_toolkit/static/lib/persian-daterangepicker-1.0.0/dateragepicker.js')
             await loadCSS('/arad_jalali_toolkit/static/lib/persian-daterangepicker-1.0.0/dateragepicker.css')
+
+            await loadJS('/arad_jalali_toolkit/static/lib/persian-date/persian-date.min.js')
         })
 
         useEffect(

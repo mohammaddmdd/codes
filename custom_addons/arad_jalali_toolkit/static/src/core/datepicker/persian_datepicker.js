@@ -12,12 +12,12 @@ export class PersianDatePicker extends DatePicker {
         this.inputRef = useRef('input')
 
         this.options = useState({
+            value: this.props.date ? this.props.date.toJSDate() : null,
             calendar: null,
             locale: null,
             format: "YYYY/MM/DD",
             monthYearSeparator: '/',
-            weekDays: null,
-            onChange: this.onInputChange.bind(this)
+            weekDays: null
         })
 
         onWillStart(async () => {
@@ -25,15 +25,22 @@ export class PersianDatePicker extends DatePicker {
         })
 
         onMounted(() => {
+            // import persian calendar and locale
+            const persian = PersianCalendar
+            const persian_fa = PersianFa
+
+            this.options.calendar = persian
+            this.options.locale = persian_fa
+
             this.renderDatePicker()
 
             // remove border style of input field in div tag that generated with React-Multi-DatePicker library
+                // should be executed after rendering, otherwise, the children property is undefined
             this.inputRef.el.children[0].children[0].style.border = 'none'
         })
     }
 
     onInputChange(value) {
-
         // because odoo accepts only Luxon DateTime format,
         // the output datetime from React-Multi-Datepicker library should be converted to luxon datetime format
         // for this purpose, first it should be converted to default JS datetime format (usnig toDate function)
@@ -48,21 +55,20 @@ export class PersianDatePicker extends DatePicker {
         else {
             this.props.onDateTimeChanged(null)  // if value is empty then save null in database
         }
+    }
 
+    handlePropsChange(newProps) {
+        this.options = newProps
+        this.renderDatePicker()
     }
 
     renderDatePicker() {
         const { DatePicker } = ReactMultiDatePicker;
-        const persian = PersianCalendar
-        const persian_fa = PersianFa
-
-        this.options.calendar = persian
-        this.options.locale = persian_fa
 
         ReactDOM.render(
             React.createElement(DatePicker, {
                 ...this.options,
-                value: this.props.date ? this.props.date.toJSDate() : null, // should be default Date in JS or DateObject from React-Multi-DatePicker library
+                onChange: this.onInputChange.bind(this),
                 onPropsChange: this.handlePropsChange.bind(this),
                 plugins: [
                     React.createElement(Settings, {
@@ -76,11 +82,6 @@ export class PersianDatePicker extends DatePicker {
             }),
             this.inputRef.el
         );
-    }
-
-    handlePropsChange(newProps) {
-        this.options = newProps
-        this.renderDatePicker()
     }
 
     async loadJSFiles() {
@@ -125,30 +126,17 @@ export class PersianDateTimePicker extends PersianDatePicker {
     setup() {
 
         super.setup()
-
-        this.options = useState({
-            calendar: null,
-            locale: null,
-            format: "YYYY/MM/DD HH:mm",
-            monthYearSeparator: '/',
-            weekDays: null,
-            onChange: this.onInputChange.bind(this)
-        })
+        this.options.format = "YYYY/MM/DD HH:mm"
 
     }
 
     renderDatePicker() {
         const { DatePicker } = ReactMultiDatePicker;
-        const persian = PersianCalendar
-        const persian_fa = PersianFa
-
-        this.options.calendar = persian
-        this.options.locale = persian_fa
 
         ReactDOM.render(
             React.createElement(DatePicker, {
                 ...this.options,
-                value: this.props.date ? this.props.date.toJSDate() : null, // should be default Date in JS or DateObject from React-Multi-DatePicker library
+                onChange: this.onInputChange.bind(this),
                 onPropsChange: this.handlePropsChange.bind(this),
                 plugins: [
                     React.createElement(AnalogTimePicker, {
