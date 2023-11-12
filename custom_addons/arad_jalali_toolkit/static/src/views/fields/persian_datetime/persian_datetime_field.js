@@ -22,13 +22,18 @@ export class PersianDateTimeField extends DateTimeField {
     }
 
     onDateTimeChanged(date) {
-        if (!areDateEquals(this.props.value || "", date)) {
+        if (!areDateEquals(this.props.value.ts || "", date)) {
             this.props.update(date);
         }
     }
 
     get formattedValue() {
-        return persianDate.unix(this.props.value.ts / 1000).format('YYYY/MM/D HH:mm');
+        if (this.props.value.ts) {
+            return persianDate.unix(this.props.value.ts / 1000).format('YYYY/MM/DD HH:mm');
+        }
+        else {
+            return ''
+        }
     }
 
 }
