@@ -20,4 +20,5 @@ registry.category("views").remove("list");
 registry.category("views").add("list", persianListView);
 
 // for all tree tags that have their specific js_class attribute
+registry.category("views").remove("hr_contract_history_list");
 registry.category("views").add("hr_contract_history_list", persianListView);
