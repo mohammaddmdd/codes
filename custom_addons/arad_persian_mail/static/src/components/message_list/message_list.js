@@ -18,7 +18,13 @@ patch(MessageList.prototype, "persianMessageList", {
     },
 
     persianFormatDate(date) {
-        console.log(date)
-        return persianDate.unix(date / 1000).format('DD MMMM YYYY');
+
+        // if date parameter is undefined that means the date to display should be today
+
+        if (date) {
+            return persianDate.unix(date / 1000).format('DD MMMM YYYY');
+        }
+
+        return new persianDate().format('DD MMMM YYYY');
     }
 });
