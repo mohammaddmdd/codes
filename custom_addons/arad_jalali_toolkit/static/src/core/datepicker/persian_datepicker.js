@@ -38,6 +38,9 @@ export class PersianDatePicker extends DatePicker {
             // remove border style of input field in div tag that generated with React-Multi-DatePicker library
             // should be executed after rendering, otherwise, the children property is undefined
             this.inputRef.el.children[0].children[0].style.border = 'none'
+
+            // this style prevents Ract-Multi-DatePicker from getting the scroll in inline edit mode
+            document.getElementsByClassName('o_list_renderer o_renderer table-responsive')[0].style.overflowX = 'visible'
         })
     }
 
