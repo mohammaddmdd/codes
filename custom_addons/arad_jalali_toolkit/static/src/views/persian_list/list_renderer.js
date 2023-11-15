@@ -15,7 +15,6 @@ export class PersianListRenderer extends ListRenderer {
 
         onMounted(() => {
             for (const column of this.state.columns) {
-                debugger
                 if (column.FieldComponent === PersianDateField) {
                     column.widget = 'date'
                 } else if (column.FieldComponent === PersianDateTimeField) {
