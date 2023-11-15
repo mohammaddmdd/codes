@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-inherit="mail.MessageList" t-inherit-mode="extension"  owl="1">
+
+        <xpath expr="//span[hasclass('o_MessageList_separatorLabelDate')]" position="after">
+            <span>/</span>
+            <span class="o_MessageList_separatorLabel o_MessageList_separatorLabelDate px-3">
+                <t t-esc="persianFormatDate(messageListViewItem.message.date)" />
+            </span>
+        </xpath>
+
+    </t>
+
+</templates>
