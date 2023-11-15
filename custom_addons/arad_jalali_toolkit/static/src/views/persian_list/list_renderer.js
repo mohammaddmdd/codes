@@ -3,15 +3,15 @@
 
 import { onMounted } from "@odoo/owl";
 import { ListRenderer } from "@web/views/list/list_renderer";
+import { patch } from "@web/core/utils/patch";
 
 import { PersianDateField } from "../fields/persian_date/persian_date_field";
 import { PersianDateTimeField } from "../fields/persian_datetime/persian_datetime_field";
 
 
-export class PersianListRenderer extends ListRenderer {
+patch(ListRenderer.prototype, "persianListRenderer", {
     setup() {
-
-        super.setup()
+        this._super()
 
         onMounted(() => {
             for (const column of this.state.columns) {
@@ -24,6 +24,5 @@ export class PersianListRenderer extends ListRenderer {
 
             this.activeElement = this.uiService.activeElement;
         })
-
     }
-}
+});
