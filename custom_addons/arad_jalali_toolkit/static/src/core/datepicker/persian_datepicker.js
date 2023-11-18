@@ -40,7 +40,11 @@ export class PersianDatePicker extends DatePicker {
             this.inputRef.el.children[0].children[0].style.border = 'none'
 
             // this style prevents Ract-Multi-DatePicker from getting the scroll in inline edit mode
-            document.getElementsByClassName('o_list_renderer o_renderer table-responsive')[0].style.overflowX = 'visible'
+            const elementDisableOverflowX = document.getElementsByClassName('o_list_renderer o_renderer table-responsive')[0]
+            // to avoid null and undefined errors
+            if (elementDisableOverflowX) {
+                elementDisableOverflowX.style.overflowX = 'visible'
+            }
         })
     }
 
