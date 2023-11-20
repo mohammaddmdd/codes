@@ -1,11 +1,11 @@
 {
-    "name": "Arad Persian Mail",
+    "name": "Arad Mail",
     'version': '1.0',
     'author': 'Arad Pergas Co',
     'website': 'https://aradware.ir',
     "license": "LGPL-3",
-    'summary': 'Odoo Jalali Localization',
-    "description": 'Jalali localization for mail module',
+    'summary': 'Arad Mail custom module',
+    "description": 'Customization for Mail module',
     "depends": ['mail'],
     'category': 'Productivity/Discuss',
     'sequence': 2,
@@ -16,7 +16,7 @@
         'web.assets_backend': [
 
             # Components
-            'arad_persian_mail/static/src/components/**/*',
+            'arad_mail/static/src/components/**/*',
 
         ],
     },
