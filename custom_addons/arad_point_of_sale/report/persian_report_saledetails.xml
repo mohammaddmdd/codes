@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+
+    <template id="persian_report_saledetails" inherit_id="point_of_sale.report_saledetails">
+
+        <xpath expr="//t[@t-if='date_start and date_stop']" position="replace">
+
+            <t t-if="date_start and date_stop">
+                <strong><t t-esc="persian_date_start" /> - <t t-esc="persian_date_stop" /></strong>
+            </t>
+
+        </xpath>
+
+    </template>
+
+</odoo>
