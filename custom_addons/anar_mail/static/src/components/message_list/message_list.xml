@@ -6,7 +6,7 @@
         <xpath expr="//span[hasclass('o_MessageList_separatorLabelDate')]" position="after">
             <span>/</span>
             <span class="o_MessageList_separatorLabel o_MessageList_separatorLabelDate px-3">
-                <t t-esc="persianFormatDate(messageListViewItem.message.date)" />
+                <t t-out="persianFormatDate(messageListViewItem.message.date)" />
             </span>
         </xpath>
 

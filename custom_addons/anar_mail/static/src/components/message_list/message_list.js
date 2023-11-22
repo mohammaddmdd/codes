@@ -1,11 +1,12 @@
 /** @odoo-module **/
 
 
-const { onWillStart } = owl;
-
 import { patch } from "@web/core/utils/patch";
+import { onWillStart } from "@odoo/owl";
 import { loadJS } from "@web/core/assets";
 import { MessageList } from "@mail/components/message_list/message_list";
+
+import { moduleName as anarWebModuleName } from '@anar_web/config'
 
 
 patch(MessageList.prototype, "persianMessageList", {
@@ -13,7 +14,7 @@ patch(MessageList.prototype, "persianMessageList", {
         this._super()
 
         onWillStart(async () => {
-            await loadJS('/arad_jalali_toolkit/static/lib/persian-date/persian-date.min.js')
+            await loadJS('/' + anarWebModuleName + '/static/lib/persian-date/persian-date.min.js')
         })
     },
 

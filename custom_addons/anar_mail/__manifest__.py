@@ -1,14 +1,14 @@
 {
-    "name": "Arad Mail",
+    "name": "Anar Mail",
     'version': '1.0',
     'author': 'Arad Pergas Co',
     'website': 'https://aradware.ir',
     "license": "LGPL-3",
-    'summary': 'Arad Mail custom module',
+    'summary': 'Anar Mail custom module',
     "description": 'Customization for Mail module',
     "depends": ['mail'],
     'category': 'Productivity/Discuss',
-    'sequence': 2,
+    'sequence': 1,
     'installable': True,
     'application': True,
 
@@ -16,7 +16,7 @@
         'web.assets_backend': [
 
             # Components
-            'arad_mail/static/src/components/**/*',
+            'anar_mail/static/src/components/**/*',
 
         ],
     },
