@@ -2,7 +2,7 @@
 <templates xml:space="preserve">
 
 
-    <t t-name="arad_jalali_toolkit.PersianDatePicker" owl="1">
+    <t t-name="anar_web.PersianDatePicker" owl="1">
 
         <div t-ref="input"
              t-att-id="props.inputId"

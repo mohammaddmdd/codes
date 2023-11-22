@@ -1,10 +1,10 @@
 {
-    "name": "Arad Web",
+    "name": "Anar Web",
     'version': '1',
     'author': 'Arad Pergas Co',
     'website': 'https://aradware.ir',
     "license": "LGPL-3",
-    'summary': 'Arad Web custom module',
+    'summary': 'Anar Web custom module',
     "description": 'Customization for Web module',
     "depends": ['web'],
     'category': 'Productivity',
@@ -15,14 +15,17 @@
     'assets': {
         'web.assets_backend': [
 
+            # Config
+            'anar_web/static/src/config.js',
+
             # Core
-            'arad_web/static/src/core/**/*',
+            'anar_web/static/src/core/**/*',
 
             # Jalali Calendar Module
-            'arad_web/static/src/views/**/*',
+            'anar_web/static/src/views/**/*',
 
             # Jalali Daterange field
-            'arad_web/static/src/views/fields/**/*'
+            'anar_web/static/src/views/fields/**/*'
 
         ],
     },

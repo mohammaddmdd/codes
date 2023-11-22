@@ -5,9 +5,10 @@ import { registry } from "@web/core/registry";
 import { areDateEquals } from "@web/core/l10n/dates";
 import { loadJS } from "@web/core/assets";
 import { onWillStart } from "@odoo/owl";
-
 import { DateTimeField } from "@web/views/fields/datetime/datetime_field";
+
 import { PersianDateTimePicker } from "../../../core/datepicker/persian_datepicker";
+import { moduleName } from "../../../config";
 
 
 export class PersianDateTimeField extends DateTimeField {
@@ -17,7 +18,7 @@ export class PersianDateTimeField extends DateTimeField {
 
         onWillStart(async () => {
             // Persian Date Library
-            await loadJS('/arad_jalali_toolkit/static/lib/persian-date/persian-date.min.js')
+            await loadJS('/' + moduleName + '/static/lib/persian-date/persian-date.min.js')
         })
     }
 
@@ -38,7 +39,7 @@ export class PersianDateTimeField extends DateTimeField {
 
 }
 
-PersianDateTimeField.template = 'arad_jalali_toolkit.PersianDateTimeField'
+PersianDateTimeField.template = moduleName + '.PersianDateTimeField'
 PersianDateTimeField.components = {
     PersianDateTimePicker
 }

@@ -5,6 +5,8 @@ import { DatePicker } from "@web/core/datepicker/datepicker";
 import { onMounted, onWillStart, useRef, useState } from "@odoo/owl";
 import { loadJS } from "@web/core/assets";
 
+import { moduleName } from "../../config";
+
 
 export class PersianDatePicker extends DatePicker {
 
@@ -95,25 +97,25 @@ export class PersianDatePicker extends DatePicker {
     async loadJSFiles() {
         const jsFiles = [
             // React
-            '/arad_jalali_toolkit/static/lib/react-multi-datepicker/react/react.production.min.js',
-            '/arad_jalali_toolkit/static/lib/react-multi-datepicker/react/react-dom.production.min.js',
+            '/' + moduleName + '/static/lib/react-multi-datepicker/react/react.production.min.js',
+            '/' + moduleName + '/static/lib/react-multi-datepicker/react/react-dom.production.min.js',
 
             // Datepicker & Dependencies
-            '/arad_jalali_toolkit/static/lib/react-multi-datepicker/date-object.min.js',
-            '/arad_jalali_toolkit/static/lib/react-multi-datepicker/react-element-popper-browser.min.js',
-            '/arad_jalali_toolkit/static/lib/react-multi-datepicker/react-multi-date-picker-browser.min.js',
+            '/' + moduleName + '/static/lib/react-multi-datepicker/date-object.min.js',
+            '/' + moduleName + '/static/lib/react-multi-datepicker/react-element-popper-browser.min.js',
+            '/' + moduleName + '/static/lib/react-multi-datepicker/react-multi-date-picker-browser.min.js',
 
             // Plugins
-            '/arad_jalali_toolkit/static/lib/react-multi-datepicker/plugins/analog_time_picker.browser.js',
-            '/arad_jalali_toolkit/static/lib/react-multi-datepicker/plugins/highlight_weekends.browser.js',
-            '/arad_jalali_toolkit/static/lib/react-multi-datepicker/plugins/settings.browser.js',
+            '/' + moduleName + '/static/lib/react-multi-datepicker/plugins/analog_time_picker.browser.js',
+            '/' + moduleName + '/static/lib/react-multi-datepicker/plugins/highlight_weekends.browser.js',
+            '/' + moduleName + '/static/lib/react-multi-datepicker/plugins/settings.browser.js',
 
             // Persian & Locale
-            '/arad_jalali_toolkit/static/lib/react-multi-datepicker/calendars/2.1.8_calendars_persian.js',
-            '/arad_jalali_toolkit/static/lib/react-multi-datepicker/locales/2.1.8_locales_persian_fa.js',
+            '/' + moduleName + '/static/lib/react-multi-datepicker/calendars/2.1.8_calendars_persian.js',
+            '/' + moduleName + '/static/lib/react-multi-datepicker/locales/2.1.8_locales_persian_fa.js',
 
             // Persian Date Library
-            '/arad_jalali_toolkit/static/lib/persian-date/persian-date.min.js'
+            '/' + moduleName + '/static/lib/persian-date/persian-date.min.js'
         ]
 
         for (const jsFile of jsFiles) {
@@ -123,7 +125,7 @@ export class PersianDatePicker extends DatePicker {
 }
 
 
-PersianDatePicker.template = 'arad_jalali_toolkit.PersianDatePicker'
+PersianDatePicker.template = moduleName + '.PersianDatePicker'
 PersianDatePicker.props = {
     ...DatePicker.props
 }
