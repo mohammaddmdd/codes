@@ -15,7 +15,7 @@
                                 class="btn"
                                 style="margin-bottom: 5%; margin-left: 84%">
                             <img width="24" height="24"
-                                 src="/anar_calendar/static/img/icons8-next-24.png"
+                                 src="/anar_calendar/static/img/icons8-previous-24.png"
                             />
                         </button>
                         <DatePicker t-if="!env.isSmall" t-props="datePickerProps"/>
@@ -28,7 +28,7 @@
                             type="button"
                             class="btn">
                         <img width="24" height="24"
-                             src="/anar_calendar/static/img/icons8-previous-24.png"
+                             src="/anar_calendar/static/img/icons8-next-24.png"
                         />
                     </button>
                 </div>
