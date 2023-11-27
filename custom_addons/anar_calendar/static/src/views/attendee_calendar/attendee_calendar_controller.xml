@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+
+    <t t-inherit="calendar.AttendeeCalendarController" t-inherit-mode="extension">
+
+        <xpath expr="//div[hasclass('o_calendar_container')]" position="replace">
+
+            <div class="o_calendar_container">
+                <MobileFilterPanel t-if="env.isSmall" t-props="mobileFilterPanelProps"/>
+                <t t-if="showCalendar" t-component="props.Renderer" t-props="rendererProps"/>
+                <div t-if="showSideBar" class="o_calendar_sidebar_container d-md-block">
+                    <div class="o_calendar_sidebar">
+                        <button
+                                t-on-click="showHideSidebar"
+                                class="btn"
+                                style="margin-bottom: 5%; margin-left: 84%">
+                            <img width="24" height="24"
+                                 src="/anar_calendar/static/img/icons8-next-24.png"
+                            />
+                        </button>
+                        <DatePicker t-if="!env.isSmall" t-props="datePickerProps"/>
+                        <FilterPanel t-props="filterPanelProps"/>
+                    </div>
+                </div>
+                <div t-else="" class="o_calendar_sidebar_container d-md-block">
+                    <button
+                            t-on-click="showHideSidebar"
+                            type="button"
+                            class="btn">
+                        <img width="24" height="24"
+                             src="/anar_calendar/static/img/icons8-previous-24.png"
+                        />
+                    </button>
+                </div>
+            </div>
+
+        </xpath>
+
+    </t>
+
+</templates>
