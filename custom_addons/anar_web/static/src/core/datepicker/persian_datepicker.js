@@ -47,6 +47,13 @@ export class PersianDatePicker extends DatePicker {
             if (elementDisableOverflowX) {
                 elementDisableOverflowX.style.overflowX = 'visible'
             }
+
+            // this style prevents Ract-Multi-DatePicker from getting the scroll in filter menu
+            const disableOverflow = document.getElementsByClassName('o-dropdown--menu dropdown-menu d-block')[1]
+            // to avoid null and undefined errors
+            if (disableOverflow) {
+                disableOverflow.style.overflow = 'visible'
+            }
         })
     }
 
