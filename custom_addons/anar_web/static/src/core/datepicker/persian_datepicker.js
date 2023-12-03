@@ -54,6 +54,12 @@ export class PersianDatePicker extends DatePicker {
             if (disableOverflow) {
                 disableOverflow.style.overflow = 'visible'
             }
+
+            // this style prevents Ract-Multi-DatePicker from getting the scroll invoicing module in configure modal menu
+            const disableModalOverflow = document.getElementsByClassName('modal-body p-0 o_act_window')[0]
+            if (disableModalOverflow) {
+                disableModalOverflow.style.overflow = 'visible'
+            }
         })
     }
 
