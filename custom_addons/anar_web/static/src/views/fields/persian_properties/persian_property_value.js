@@ -5,8 +5,5 @@ import { PropertyValue } from "@web/views/fields/properties/property_value";
 
 import { PersianDatePicker, PersianDateTimePicker } from "../../../core/datepicker/persian_datepicker";
 
-delete PropertyValue.components.DateTimePicker
-delete PropertyValue.components.DatePicker
-
-PropertyValue.components.PersianDateTimePicker = PersianDateTimePicker
-PropertyValue.components.PersianDatePicker = PersianDatePicker
+PropertyValue.components.DateTimePicker = PersianDateTimePicker
+PropertyValue.components.DatePicker = PersianDatePicker

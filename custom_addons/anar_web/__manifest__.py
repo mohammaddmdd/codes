@@ -21,11 +21,14 @@
             # Core
             'anar_web/static/src/core/**/*',
 
-            # Jalali Calendar Module
+            # Views
             'anar_web/static/src/views/**/*',
 
-            # Jalali Daterange field
-            'anar_web/static/src/views/fields/**/*'
+            # Fields
+            'anar_web/static/src/views/fields/**/*',
+
+            # Search
+            'anar_web/static/src/search/**/*',
 
         ],
     },
