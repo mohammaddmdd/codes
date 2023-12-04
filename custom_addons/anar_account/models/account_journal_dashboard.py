@@ -37,10 +37,11 @@ class AccountJournal(models.AbstractModel):
 
         # updating default labels with new Jalali labels
         result = super()._get_sale_purchase_graph_data()
-        values = result[1][0]['values']
 
-        for index, item in enumerate(values):
-            if index not in (0, 2, 5):
-                item['label'] = labels[index - 1]
+        for item in result.values():
+            values = item[0]['values']
+            for index, value in enumerate(values):
+                if index not in (0, 2, 5):  # for ignoring labels that do not include dates, ex: "This Week"
+                    value['label'] = labels[index - 1]
 
         return result
