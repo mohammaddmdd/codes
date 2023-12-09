@@ -31,5 +31,9 @@
             'anar_web/static/src/search/**/*',
 
         ],
+
+        'web.assets_frontend': [
+            'anar_web/static/src/legacy/scss/base_frontend.scss',
+        ]
     },
 }
