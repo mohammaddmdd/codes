@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="anar_theme.Toggle" owl="1">
+        <a role="button" href="#" class="customizer-toggle dropdown-toggle o-no-caret o-dropdown--narrow"
+           t-on-click="toggleTheme">
+            <span class="fa fa-refresh"/>
+        </a>
+    </t>
+
+</templates>

@@ -1,0 +1,1707 @@
+$color_1: #4285F4;
+$color_2: #d8deea;
+$color_3: #a1b0cb;
+$color_4: rgba(216, 222, 234, 0.7);
+$color_5: rgba(216, 222, 234, 0.9);
+$color_6: #ffc107;
+$color_7: #1C222F;
+$color_8: #fff;
+$color_9: #69809a;
+$color_10: #495c7e;
+$color_11: #5b739c;
+$background-color_1: #1C222F;
+$background-color_2: #36445D;
+$background-color_3: #495c7e;
+$background-color_4: #4285F4;
+$background-color_5: #4c5f81;
+$background-color_6: #323e52;
+$background-color_7: #262e3d;
+$background-color_8: #252f40;
+$background-color_9: #5b739c;
+$background-color_10: #6da3fb;
+$background-color_11: #597099;
+$background-color_12: #3871cf;
+$border-color_1: transparent;
+$border-color_2: #36445D;
+$border-color_3: #4285F4;
+$border-color_4: #495c7e;
+$border-color_5: #5b739c;
+$border-color_6: #000000;
+$border-left-color_1: #000000;
+$border-left-color_2: #4285F4;
+
+/* Control Panel Darkmode Style */
+/* Card Darkmode Style */
+/* Form Darkmode Style */
+/* List Darkmode Style */
+/* Mail Darkmode Style */
+/* Calendar Darkmode Sidebar Style */
+/* Calendar Darkmode Style */
+/* Pivot Darkmode Style */
+/* Activity Darkmode Style */
+/* Graoh Darkmode Style */
+/* Pivot Darkmode Style */
+/* Modal Darkmode Style */
+/* Dashboard Darkmode Style */
+/* Setting Darkmode Style */
+/* Other Darkmode Style */
+
+body.dark-theme {
+    background-color: $background-color_1 !important;
+    color: $color_2;
+}
+
+.dark-theme {
+    .o_navbar_apps_menu {
+        >.o-dropdown--menu {
+            background: url("../img/home-menu-bg-overlay.svg") 0% 0% / cover, linear-gradient(rgb(28, 34, 47), rgb(54, 68, 93)) !important;
+        }
+    }
+
+    .bg-view {
+        background-color: $background-color_1 !important;
+    }
+
+    .o_renderer {
+        background-color: $background-color_1 !important;
+    }
+
+    .text-odoo {
+        color: $color_1 !important;
+    }
+
+    .o_kanban_dashboard {
+        &:not(.o_legacy_kanban_view) {
+            .o_kanban_record {
+                >div {
+                    .o_kanban_card_header_title {
+                        .o_primary {
+                            color: $color_2 !important;
+                        }
+                    }
+
+                    .o_kanban_primary_left {
+                        .o_primary {
+                            >span {
+                                &:first-child {
+                                    color: $color_2 !important;
+                                }
+                            }
+                        }
+                    }
+
+                    .oe_kanban_content {
+                        >.o_title {
+                            >h3 {
+                                color: $color_2 !important;
+                            }
+
+                            >.h3 {
+                                color: $color_2 !important;
+                            }
+                        }
+                    }
+
+                    .o_kanban_card_manage_pane.container {
+                        div[class*="col-"] {
+                            >.o_kanban_card_manage_title {
+                                color: $color_2 !important;
+                            }
+                        }
+                    }
+
+                    .o_kanban_card_manage_pane.o_container_small {
+                        div[class*="col-"] {
+                            >.o_kanban_card_manage_title {
+                                color: $color_2 !important;
+                            }
+                        }
+                    }
+
+                    .o-dropdown.show {
+                        .o_kanban_card_manage_pane {
+                            background-color: $background-color_3 !important;
+                            border-color: $border-color_5 !important;
+                            box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.5) !important;
+                        }
+                    }
+                }
+
+                >div.o_dropdown_open {
+                    .o_kanban_card_manage_pane {
+                        background-color: $background-color_3 !important;
+                        border-color: $border-color_5 !important;
+                        box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.5) !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .btn-link {
+        color: $color_1 !important;
+    }
+
+    .btn-link.btn-dark,
+    .btn-link.text-dark {
+        color: $color_2 !important;
+    }
+
+    .btn-link.btn-dark:hover,
+    .btn-link.text-dark:hover {
+        color: $color_1 !important;
+    }
+
+    .text-primary {
+        color: $color_1 !important;
+    }
+
+    .text-muted {
+        color: $color_3 !important;
+    }
+
+    .text-700 {
+        color: $color_4 !important;
+    }
+
+    .text-900 {
+        color: $color_5 !important;
+    }
+
+    .bg-light {
+        background-color: $background-color_2 !important;
+        color: $color_2 !important;
+    }
+
+    .bg-100 {
+        background-color: $background-color_2 !important;
+        color: $color_2 !important;
+
+        .text-muted {
+            color: $color_2 !important;
+        }
+    }
+
+    .bg-white {
+        background-color: $background-color_2 !important;
+        color: $color_2 !important;
+    }
+
+    .bg-300 {
+        background-color: $background-color_3 !important;
+    }
+
+    .border {
+        border: 1px solid #495c7e !important;
+    }
+
+    .border-start {
+        border-left: 1px solid #495c7e !important;
+    }
+
+    .border-end {
+        border-right: 1px solid #495c7e !important;
+    }
+
+    .border-bottom {
+        border-bottom: 1px solid #495c7e !important;
+    }
+
+    .border-top {
+        border-top: 1px solid #495c7e !important;
+    }
+
+    h1 {
+        color: $color_2 !important;
+    }
+
+    .h1 {
+        color: $color_2 !important;
+    }
+
+    h2 {
+        color: $color_2 !important;
+    }
+
+    .h2 {
+        color: $color_2 !important;
+    }
+
+    h3 {
+        color: $color_2 !important;
+    }
+
+    .h3 {
+        color: $color_2 !important;
+    }
+
+    h4 {
+        color: $color_2 !important;
+    }
+
+    .h4 {
+        color: $color_2 !important;
+    }
+
+    h5 {
+        color: $color_2 !important;
+    }
+
+    .h5 {
+        color: $color_2 !important;
+    }
+
+    .o_legacy_kanban_view.o_kanban_dashboard {
+        .o_kanban_record {
+            .o_kanban_card_manage_pane.container {
+                div[class*="col-"] {
+                    >.o_kanban_card_manage_title {
+                        color: $color_2 !important;
+                    }
+                }
+            }
+
+            .o_kanban_card_manage_pane.o_container_small {
+                div[class*="col-"] {
+                    >.o_kanban_card_manage_title {
+                        color: $color_2 !important;
+                    }
+                }
+            }
+        }
+    }
+
+    h6 {
+        color: $color_2 !important;
+    }
+
+    .h6 {
+        color: $color_2 !important;
+    }
+
+    .text-warning {
+        color: $color_6 !important;
+    }
+
+    .o_activity_view {
+        .o_activity_summary_cell {
+            background-color: $background-color_2 !important;
+
+            .o_activity_btn {
+                >.badge.today {
+                    color: $color_6 !important;
+                }
+
+                >.btn-link.badge.today {
+                    &:hover {
+                        color: $color_6 !important;
+                    }
+
+                    &:focus {
+                        color: $color_6 !important;
+                    }
+
+                    color: $color_3 !important;
+                }
+
+                >.btn-link.focus.badge.today {
+                    color: $color_6 !important;
+                }
+            }
+        }
+
+        .o_activity_summary_cell.o_activity_empty_cell {
+            &:hover {
+                background-color: $background-color_3 !important;
+                color: $color_2 !important;
+            }
+        }
+    }
+
+    .o_mail_activity {
+        .o_activity_color_today {
+            color: $color_6 !important;
+        }
+
+        .btn-link.o_activity_color_today {
+            &:hover {
+                color: $color_6 !important;
+            }
+
+            &:focus {
+                color: $color_6 !important;
+            }
+
+            color: $color_3 !important;
+        }
+
+        .btn-link.focus.o_activity_color_today {
+            color: $color_6 !important;
+        }
+    }
+
+    .card {
+        background-color: $background-color_2 !important;
+    }
+
+    .card-body {
+        background-color: $background-color_3 !important;
+    }
+
+    .btn-link.btn-warning {
+        &:hover {
+            color: $color_6 !important;
+        }
+
+        &:focus {
+            color: $color_6 !important;
+        }
+
+        color: $color_3 !important;
+    }
+
+    .btn-link.btn-warning.focus {
+        color: $color_6 !important;
+    }
+
+    .btn-link.text-warning {
+        &:hover {
+            color: $color_6 !important;
+        }
+
+        &:focus {
+            color: $color_6 !important;
+        }
+
+        color: $color_3 !important;
+    }
+
+    .btn-link.text-warning.focus {
+        color: $color_6 !important;
+    }
+
+    .o_control_panel {
+        background-color: $background-color_2 !important;
+        border-color: $border-color_5 !important;
+
+        .o_cp_bottom_right {
+            >.o_cp_pager {
+                color: $color_2 !important;
+            }
+        }
+    }
+
+    .breadcrumb {
+        background-color: $background-color_2 !important;
+        border-color: $border-color_5 !important;
+    }
+
+    .breadcrumb-item.active {
+        color: $color_2 !important;
+    }
+
+    .bs-popover-top>.popover-arrow:after,
+    .bs-popover-auto[data-popper-placement^="top"]>.popover-arrow:after {
+        border-top-color: $border-color_4 !important;
+    }
+
+    .bs-popover-bottom>.popover-arrow:after,
+    .bs-popover-auto[data-popper-placement^="bottom"]>.popover-arrow:after {
+        border-bottom-color: $border-color_4 !important;
+    }
+
+    .o_tag.o_tag_color_0 {
+        background-color: $background-color_3 !important;
+        color: $color_11 !important;
+        box-shadow: inset 0 0 0 1px;
+        border-radius: 3px !important;
+    }
+
+    .o_tag.o_tag_color_0 {
+        .o_tag_badge_text {
+            color: $color_2 !important;
+        }
+    }
+
+    .btn-light {
+        background-color: $background-color_4 !important;
+        color: $color_2 !important;
+        border-color: $border-color_5 !important;
+    }
+
+    .btn-light:hover {
+        background-color: $background-color_12 !important;
+        border-color: $border-color_5 !important;
+    }
+
+    .btn-group {
+        .btn.active {
+            background-color: #dae0e5 !important;
+            border-color: #d3d9df !important;
+            color: $color_1 !important;
+        }
+    }
+
+    .btn-group-vertical {
+        .btn.active {
+            background-color: #dae0e5 !important;
+            border-color: #d3d9df !important;
+            color: $color_1 !important;
+        }
+    }
+
+    .o_form_view {
+        .o_statusbar_status {
+            .o_arrow_button {
+                &:not(.disabled) {
+                    background-color: $background-color_4 !important;
+                    color: $color_2 !important;
+                    border-color: $border-color_5 !important;
+                }
+            }
+        }
+
+        .oe_title {
+            color: $color_2 !important;
+        }
+
+        .o_form_sheet_bg {
+            background-color: $background-color_1 !important;
+
+            >.o_form_sheet {
+                background-color: $background-color_2 !important;
+            }
+        }
+
+        background-color: $background-color_2 !important;
+        border-radius: 5px !important;
+        margin-bottom: 5px !important;
+
+        .oe_avatar {
+            >div {
+                >img {
+                    border: 1px solid #5b739c !important;
+                    border-radius: 5px !important;
+                }
+            }
+        }
+
+        .oe_button_box {
+            .oe_stat_button {
+                .o_button_icon {
+                    color: $color_2 !important;
+                }
+            }
+        }
+
+        .o_form_statusbar {
+            background-color: $background-color_3 !important;
+        }
+
+        &:not(.o_field_highlight) {
+            .o_field_widget {
+                &:not(.o_field_invalid) {
+                    &:not(.o_field_highlight) {
+                        .o_input {
+                            &:not(:hover) {
+                                &:not(:focus) {
+                                    padding: 2px !important;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .o_kanban_renderer {
+            background-color: $background-color_2 !important;
+
+            .o_kanban_record>div {
+                background-color: $background-color_3 !important;
+            }
+        }
+    }
+
+    .o_survey_survey_view_kanban .o_survey_kanban_card_certification {
+        background-image: linear-gradient(rgba(54, 68, 93, 0.9), rgba(54, 68, 93, 0.9)), url(/survey/static/src/img/trophy-solid.svg);
+    }
+
+    .o_kanban_dashboard:not(.o_legacy_kanban_view) .o_kanban_record>div .o_kanban_card_manage_pane.container div[class*="col-"]>div:not(.o_kanban_card_manage_title)>a,
+    .o_kanban_dashboard:not(.o_legacy_kanban_view) .o_kanban_record>div .o_kanban_card_manage_pane.o_container_small div[class*="col-"]>div:not(.o_kanban_card_manage_title)>a {
+        color: #4285F4 !important;
+    }
+
+    .o_searchview {
+        .o_searchview_icon {
+            color: $color_2 !important;
+        }
+
+        .o_searchview_input {
+            background-color: $background-color_2 !important;
+            color: $color_2 !important;
+
+            &::placeholder {
+                color: $color_3 !important;
+            }
+        }
+
+        .o_searchview_facet {
+            .o_facet_remove {
+                color: $color_7 !important;
+            }
+        }
+    }
+
+    .o_searchview_input_container {
+        background-color: $background-color_2 !important;
+    }
+
+    .o_timeoff_dashboard {
+        background-color: $background-color_2 !important;
+        box-shadow: inset 0 -1px 0 $border-color_5 !important;
+    }
+
+    .o_timeoff_card:not(:last-child) {
+        border-right-color: $border-color_5 !important;
+    }
+
+    .o_timeoff_card .o_timeoff_name {
+        color: $color_2 !important;
+    }
+
+    .mt_apps_search_container {
+        .mt_apps_search_input {
+            background-color: $background-color_2 !important;
+        }
+    }
+
+    .dropdown-menu {
+        background-color: $background-color_3 !important;
+        border-color: $border-color_5 !important;
+        box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.5) !important;
+        color: $color_2 !important;
+    }
+
+    .dropdown-item {
+        color: $color_8 !important;
+    }
+
+    .dropdown-divider {
+        border-top: 1px solid $border-color_5;
+    }
+
+    .alert-info,
+    .alert-success {
+        background-color: $background-color_4 !important;
+    }
+
+    .o_switch_company_menu {
+        .dropdown-menu {
+            .dropdown-item {
+                background-color: $background-color_3 !important;
+
+                .toggle_company {
+                    background-color: $background-color_3 !important;
+                    color: $color_2 !important;
+
+                    .btn-light {
+                        background-color: $background-color_3 !important;
+                        border-right: 1px solid $border-color_5 !important;
+                    }
+                }
+
+                .log_into {
+                    background-color: $background-color_3 !important;
+                    color: $color_2 !important;
+                }
+
+                .log_into.alert-primary {
+                    background-color: $background-color_4 !important;
+                    border-radius: 5px !important;
+                }
+            }
+        }
+    }
+
+    .o_ActivityMenuView_activityGroup {
+        color: $color_2 !important;
+    }
+
+    .o_ActivityMenuView_activityGroup:hover {
+        background-color: $background-color_2 !important;
+
+        .o_ActivityMenuView_activityGroupName {
+            color: $color_2 !important;
+        }
+    }
+
+    .o_ActivityMenuView_activityGroup:not(:last-child) {
+        border-color: $border-color_5 !important;
+    }
+
+    .o_NotificationListItem {
+        background-color: $background-color_3 !important;
+        border-color: $border-color_5 !important;
+    }
+
+    .o_NotificationListItem:hover {
+        background-color: $background-color_2 !important;
+    }
+
+    .list-group-item {
+        background-color: $background-color_2 !important;
+        color: $color_2 !important;
+    }
+
+    .o_search_panel {
+        background-color: $background-color_2 !important;
+    }
+
+    .o_search_panel_section_header {
+        b {
+            color: $color_2 !important;
+        }
+    }
+
+    .o_kanban_renderer {
+        .o_kanban_record {
+            >div {
+                background-color: $background-color_2 !important;
+                color: $color_2 !important;
+                border: none !important;
+                border-radius: 5px !important;
+                box-shadow: 0 0.125rem 0.875rem 0 rgba(0, 0, 0, 0.15) !important;
+            }
+
+            .o_dropdown_kanban {
+                .dropdown-toggle {
+                    color: $color_2 !important;
+                }
+            }
+
+            .o_dropdown_kanban.show {
+                .dropdown-toggle {
+                    background: transparent !important;
+                    border-color: $border-color_5 !important;
+                }
+            }
+
+            .o_kanban_record_title {
+                color: $color_2 !important;
+            }
+
+            .o_kanban_record_bottom {
+                border-top: 1px solid #5b739c !important;
+            }
+
+            .o_kanban_record_has_image_fill {
+                .o_kanban_image_fill_left {
+                    opacity: 80% !important;
+                }
+
+                .o_kanban_image {
+                    opacity: 80% !important;
+                }
+            }
+        }
+
+        .o_kanban_quick_create {
+            background-color: $background-color_2 !important;
+            color: $color_2 !important;
+            border: none !important;
+            border-radius: 5px !important;
+            box-shadow: 0 0.125rem 0.875rem 0 rgba(0, 0, 0, 0.15) !important;
+        }
+
+        .o_group_draggable {
+            .o_kanban_quick_create {
+                background-color: $background-color_3 !important;
+            }
+        }
+
+        .o_kanban_group.o_kanban_has_progressbar {
+            >.o_kanban_header {
+                .o_kanban_header_title {
+                    span {
+                        color: $color_2 !important;
+
+                        i {
+                            color: $color_2 !important;
+                        }
+                    }
+                }
+
+                .o_kanban_counter {
+                    .o_kanban_counter_side {
+                        color: $color_2 !important;
+                    }
+                }
+            }
+        }
+
+        .o_kanban_group {
+            .o_kanban_header {
+                >.o_kanban_header_title {
+                    .o_column_title {
+                        color: $color_2 !important;
+                    }
+
+                    .o_kanban_config {
+                        i {
+                            color: $color_2 !important;
+                        }
+                    }
+                }
+            }
+        }
+
+        .o_column_quick_create {
+            .o_quick_create_unfolded {
+                background-color: $background-color_2 !important;
+
+                .o_kanban_header {
+                    .btn {
+                        background-color: $background-color_4 !important;
+                        color: $color_2 !important;
+                    }
+                }
+            }
+
+            .o_kanban_muted_record {
+                border-radius: 5px !important;
+            }
+        }
+
+        .oe_kanban_card {
+            .o_dropdown_kanban {
+                .dropdown-toggle {
+                    color: $color_2 !important;
+                }
+            }
+
+            .o_dropdown_kanban.show {
+                .dropdown-toggle {
+                    background: transparent !important;
+                    border-color: $border-color_5 !important;
+                }
+            }
+        }
+
+        .o_kanban_group.o_column_folded {
+            background-color: $background-color_5 !important;
+            color: $color_2 !important;
+        }
+    }
+
+    .o_kanban_view {
+        .o_kanban_renderer {
+            .o_kanban_record.o_record_draggable {
+                >div {
+                    background-color: $background-color_3 !important;
+                }
+            }
+        }
+
+        .o_slide_kanban {
+            .o_kanban_slides_card_manage_pane {
+                >div {
+                    >a {
+                        color: $color_2 !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .o_field_widget.o_priority {
+        >.o_priority_star.fa-star-o {
+            color: $color_3 !important;
+        }
+    }
+
+    .o_field_widget {
+        .o_priority {
+            >.o_priority_star.fa-star-o {
+                color: $color_3 !important;
+            }
+        }
+    }
+
+    .o_FormRenderer_chatterContainer.o-aside {
+        border-left-color: $border-color_5 !important;
+    }
+
+    .o_ActivityBox_activityList {
+        .btn-link.btn-primary {
+            color: $color_3 !important;
+        }
+
+        .btn-link.text-primary {
+            color: $color_3 !important;
+        }
+    }
+
+    .o_Activity_userName {
+        color: $color_3 !important;
+    }
+
+    .o_ActivityBox_titleText {
+        color: $color_3 !important;
+    }
+
+    .o-form-buttonbox {
+        box-shadow: inset 0 -1px 0 #36445D !important;
+
+        .btn.oe_stat_button {
+            >.o_stat_info {
+                .o_stat_value {
+                    color: $color_3 !important;
+                }
+            }
+
+            >span {
+                .o_stat_value {
+                    color: $color_3 !important;
+                }
+            }
+
+            >.o_field_statinfo {
+                .o_stat_value {
+                    color: $color_3 !important;
+                }
+            }
+        }
+    }
+
+    .o-form-buttonbox.o_full {
+        >* {
+            &:first-child {
+                box-shadow: -1px 0 0 #36445D !important;
+            }
+        }
+    }
+
+    .form-control {
+        background-color: $background-color_2 !important;
+        border: transparent !important;
+        border-radius: 5px !important;
+        color: $color_2 !important;
+    }
+
+    .o_input {
+        background-color: $background-color_2 !important;
+        border: transparent !important;
+        border-radius: 5px !important;
+        color: $color_2 !important;
+    }
+
+    .o_wrap_input {
+        background-color: $background-color_2 !important;
+    }
+
+    a {
+        &:hover {
+            color: $color_2 !important;
+        }
+    }
+
+    .btn-secondary {
+        background-color: $background-color_6 !important;
+        color: $color_9 !important;
+        border-color: $border-color_5 !important;
+
+        &:hover {
+            background-color: $background-color_7 !important;
+        }
+
+        &:focus {
+            background-color: $background-color_7 !important;
+        }
+
+        &:disabled {
+            background-color: $background-color_9 !important;
+            color: $color_3 !important;
+        }
+    }
+
+    .btn-secondary.focus {
+        background-color: $background-color_7 !important;
+    }
+
+    .btn-outline-secondary {
+        background-color: $background-color_4 !important;
+        border-color: $border-color_3 !important;
+        color: $color_2 !important;
+    }
+
+    .o_notebook {
+        .nav {
+            background-color: $background-color_2 !important;
+        }
+
+        .nav-link {
+            &:hover {
+                border-color: $border-color_3 !important;
+            }
+        }
+    }
+
+    .nav-link {
+        color: $color_2 !important;
+    }
+
+    .nav-tabs {
+        .nav-link.active {
+            background-color: $background-color_4 !important;
+            border-color: $border-color_3 !important;
+        }
+
+        .nav-item.show {
+            .nav-link {
+                background-color: $background-color_4 !important;
+                border-color: $border-color_3 !important;
+            }
+        }
+
+        border-bottom: 1px solid #4285F4 !important;
+    }
+
+    .o_form_view.o_xxl_form_view {
+        .o_form_sheet_bg {
+            >.o_form_sheet {
+                margin: 1rem 0rem !important;
+            }
+        }
+
+        .o_module_form {
+            .o_form_sheet_bg {
+                >.o_form_sheet {
+                    margin: 1rem auto !important;
+                }
+            }
+        }
+    }
+
+    .o_field_statusbar {
+        >.o_statusbar_status {
+            >.o_arrow_button:not(:first-of-type) {
+                &:before {
+                    border-left-color: $border-color_3;
+                }
+
+                &:after {
+                    border-left-color: $border-color_3;
+                }
+            }
+        }
+    }
+
+    .note-editable {
+        background-color: $background-color_2 !important;
+        color: $color_2 !important;
+
+        p {
+            color: $color_2 !important;
+        }
+    }
+
+    .table {
+        border-color: $border-color_5 !important;
+    }
+
+    .table :not(:first-child) {
+        border-top-color: $border-color_5 !important;
+    }
+
+    .o_list_renderer {
+        .o_list_table {
+            background-color: $background-color_2 !important;
+            color: $color_2 !important;
+            border-color: $border-color_5 !important;
+
+            thead {
+                background-color: $background-color_8 !important;
+                color: $color_2 !important;
+
+                th {
+                    &:not(.o_list_record_selector) {
+                        border-left: 1px solid #5b739c !important;
+                    }
+                }
+            }
+
+            tfoot {
+                background-color: $background-color_3 !important;
+                border-bottom: 1px solid #5b739c;
+            }
+        }
+    }
+
+    .table-hover {
+        >tbody {
+            >tr {
+                &:hover {
+                    >* {
+                        color: $color_2 !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .o_list_view {
+        .o_list_table {
+            tbody {
+                >tr {
+                    >td {
+                        &:not(.o_list_record_selector) {
+                            &:not(.o_handle_cell) {
+                                &:not(.o_list_button) {
+                                    &:not(.o_state_selection_cell) {
+                                        border-left: 1px solid #5b739c !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .table-info {
+        --table-bg: #4285F4 !important;
+        --table-striped-bg: #4285F4 !important;
+        --table-striped-color: #d8deea !important;
+        --table-active-bg: #4285F4 !important;
+        --table-active-color: #d8deea !important;
+        --table-hover-bg: #4285F4 !important;
+        --table-hover-color: #d8deea !important;
+        color: $color_2 !important;
+        border-color: $border-color_3 !important;
+    }
+
+    .table-active {
+        color: $color_1 !important;
+    }
+
+    .oi-fw {
+        color: $color_2 !important;
+    }
+
+    .o_ThreadViewTopbar_threadName {
+        border: none !important;
+    }
+
+    .btn-secondary.disabled {
+        background-color: $background-color_9 !important;
+        color: $color_3 !important;
+    }
+
+    .o_Chatter.bg-view,
+    .o_Chatter .o_MessageList.bg-view {
+        background-color: $background-color_2 !important;
+    }
+
+    .o_Chatter .o_ThreadView_core .o_MessageList .o_Message_custom {
+        background-color: $background-color_3 !important;
+    }
+
+    .o_Chatter .o_ThreadView_core .o_MessageList .o_Message_custom.current_user {
+        background-color: $background-color_4 !important;
+    }
+
+    .o_MessageList.bg-view {
+        background-color: $background-color_1 !important;
+    }
+
+    .o_colored_level {
+        .bg-100 {
+            .text-muted {
+                color: $color_2 !important;
+            }
+        }
+    }
+
+    .bg-200 {
+        background-color: $background-color_4 !important;
+        color: $color_8 !important;
+    }
+
+    a.bg-200 {
+        &:hover {
+            background-color: $background-color_4 !important;
+            color: $color_8 !important;
+        }
+
+        &:focus {
+            background-color: $background-color_4 !important;
+            color: $color_8 !important;
+        }
+    }
+
+    button.bg-200 {
+        &:hover {
+            background-color: $background-color_4 !important;
+            color: $color_8 !important;
+        }
+
+        &:focus {
+            background-color: $background-color_4 !important;
+            color: $color_8 !important;
+        }
+    }
+
+    a.bg-100 {
+        &:hover {
+            background-color: $background-color_4 !important;
+            color: $color_8 !important;
+        }
+
+        &:focus {
+            background-color: $background-color_4 !important;
+            color: $color_8 !important;
+        }
+    }
+
+    button.bg-100 {
+        &:hover {
+            background-color: $background-color_4 !important;
+            color: $color_8 !important;
+        }
+
+        &:focus {
+            background-color: $background-color_4 !important;
+            color: $color_8 !important;
+        }
+    }
+
+    .o_ThreadView_core {
+        .o_MessageList {
+            .o_Message_custom {
+                background-color: $background-color_2 !important;
+
+                .o_MessageInReplyToView {
+                    background-color: $background-color_3 !important;
+                    color: $color_2 !important;
+                }
+            }
+
+            .o_Message_custom.current_user {
+                background-color: $background-color_4 !important;
+
+                a {
+                    color: #f0f0f0 !important;
+                }
+
+                .o_MessageInReplyToView {
+                    background-color: $background-color_10 !important;
+                }
+            }
+        }
+    }
+
+    .o_MessageActionList {
+        box-shadow: 0 0.125rem 0.875rem 0 rgba(0, 0, 0, 0.15) !important;
+        background-color: $background-color_9 !important;
+        border-color: $border-color_5 !important;
+        color: $color_2 !important;
+    }
+
+    .o_MessageActionView {
+        &:hover {
+            background-color: $background-color_4 !important;
+        }
+    }
+
+    .o_ComposerTextInput_textareaStyle.o-composer-is-compact {
+        background-color: $background-color_2 !important;
+        color: $color_2 !important;
+        border-color: $border-color_5 !important;
+    }
+
+    .o_Composer_toolButtons.bg-view {
+        background-color: $background-color_2 !important;
+    }
+
+    .o_ThreadViewTopbar_threadDescription.o_ThreadViewTopbar_editableItem {
+        border: none !important;
+    }
+
+    .o_ThreadViewTopbar_button.o-isActive {
+        background-color: $background-color_4 !important;
+
+        &:hover {
+            background-color: $background-color_4 !important;
+
+            i {
+                color: $color_2 !important;
+            }
+        }
+
+        i {
+            color: $color_2 !important;
+        }
+    }
+
+    .o_ThreadViewTopbar_button {
+        &:hover {
+            background-color: $background-color_4 !important;
+
+            i {
+                color: $color_2 !important;
+            }
+        }
+    }
+
+    .o_EmojiCategoryBarView {
+        --emojicategorybarview-background-color: #36445D !important;
+    }
+
+    .o_ChannelInvitationForm {
+        input {
+            &:not(.o_ChannelInvitationForm_selectablePartnerCheckbox) {
+                color: $color_3 !important;
+
+                &::placeholder {
+                    color: $color_3 !important;
+                }
+            }
+        }
+
+        div {
+            div {
+                color: $color_2 !important;
+            }
+        }
+    }
+
+    .o_CallActionList_button {
+        &:not(.btn-danger) {
+            --callactionlist_button-background-color: #4285F4 !important;
+        }
+    }
+
+    .o_Discuss_content {
+        .bg-view {
+            background-color: $background-color_1 !important;
+        }
+    }
+
+    .o_Composer_coreHeader.text-truncate {
+        background-color: #4285F4 !important;
+    }
+
+    .o_calendar_sidebar_container {
+        background-color: $background-color_2 !important;
+        border-top: 1px solid #5b739c;
+        border-left: 1px solid #5b739c;
+        color: $color_2 !important;
+
+        .o_calendar_mini.hasDatepicker {
+            border: transparent !important;
+        }
+
+        .ui-datepicker {
+            background-color: $background-color_3 !important;
+            color: $color_2 !important;
+
+            th {
+                >span {
+                    color: $color_3 !important;
+                }
+            }
+
+            td {
+                a {
+                    color: $color_2 !important;
+                }
+
+                span {
+                    color: $color_2 !important;
+                }
+            }
+
+            .o_selected_range.o_color {
+                &:not(.ui-datepicker-unselectable) {
+                    background-color: $background-color_11 !important;
+                }
+            }
+        }
+    }
+
+    .o_calendar_sidebar {
+        #calendar_sync_wrapper {
+            .btn {
+                color: $color_2 !important;
+            }
+        }
+    }
+
+    .o_calendar_renderer {
+        background: none !important;
+
+        thead {
+            tr {
+                background-color: $background-color_2 !important;
+                color: $color_2 !important;
+            }
+        }
+
+        .fc-event.o_calendar_color_3.o_attendee_status_alone,
+        .fc-event.o_calendar_color_3.o_attendee_status_needsAction {
+            background-color: $background-color_9 !important;
+            color: $color_2 !important;
+        }
+
+        .fc-event.o_calendar_color_3.o_attendee_status_needsAction,
+        .fc-event.o_calendar_color_3.o_attendee_status_alone {
+            .fc-bg {
+                background-color: $background-color_9 !important;
+            }
+        }
+
+        .o_calendar_widget {
+            td {
+                border-color: $border-color_5 !important;
+            }
+
+            .fc-timeGridDay-view {
+                div.fc-day-grid {
+                    background-color: $background-color_3 !important;
+                    color: $color_2 !important;
+                }
+
+                .fc-axis.fc-time {
+                    color: $color_3 !important;
+                }
+
+                .fc-slats {
+                    tr {
+                        &:first-child {
+                            td.fc-widget-content {
+                                &:last-child {
+                                    box-shadow: inset 0 1px 0 #495c7e !important;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .fc-event {
+                    box-shadow: 0 0 0 1px #495c7e !important;
+                }
+
+                .fc-day.fc-widget-content.fc-today {
+                    &:not(.o_calendar_disabled) {
+                        background-color: $background-color_2 !important;
+                    }
+                }
+            }
+
+            .fc-timeGridWeek-view {
+                div.fc-day-grid {
+                    background-color: $background-color_3 !important;
+                    color: $color_2 !important;
+                }
+
+                .fc-axis.fc-time {
+                    color: $color_3 !important;
+                }
+
+                .fc-slats {
+                    tr {
+                        &:first-child {
+                            td.fc-widget-content {
+                                &:last-child {
+                                    box-shadow: inset 0 1px 0 #495c7e !important;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .fc-event {
+                    box-shadow: 0 0 0 1px #495c7e !important;
+                }
+
+                .fc-day.fc-widget-content.fc-today {
+                    &:not(.o_calendar_disabled) {
+                        background-color: $background-color_2 !important;
+                    }
+                }
+            }
+
+            .fc-event-container {
+                color: $color_10 !important;
+            }
+
+            .fc-dayGridMonth-view {
+                .fc-day-number {
+                    color: $color_2 !important;
+                }
+
+                .fc-day-top.fc-other-month {
+                    .fc-day-number {
+                        color: $color_3 !important;
+                    }
+                }
+
+                .fc-bg {
+                    .fc-today {
+                        &:not(.o_calendar_disabled) {
+                            background-color: $background-color_3 !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .fc-unthemed {
+        th {
+            border-color: $border-color_5 !important;
+        }
+
+        td {
+            border-color: $border-color_5 !important;
+        }
+
+        thead {
+            border-color: $border-color_5 !important;
+        }
+
+        tbody {
+            border-color: $border-color_5 !important;
+        }
+
+        .fc-divider {
+            border-color: $border-color_5 !important;
+        }
+
+        .fc-row {
+            border-color: $border-color_5 !important;
+        }
+
+        .fc-content {
+            border-color: $border-color_5 !important;
+        }
+
+        .fc-popover {
+            border-color: $border-color_5 !important;
+        }
+
+        .fc-list-view {
+            border-color: $border-color_5 !important;
+        }
+
+        .fc-list-heading {
+            td {
+                border-color: $border-color_5 !important;
+            }
+        }
+    }
+
+    .o_calendar_scale_buttons {
+        .btn-secondary {
+            background-color: $background-color_3 !important;
+            color: $color_3 !important;
+
+            &:hover {
+                background-color: $background-color_2 !important;
+            }
+        }
+    }
+
+    .o_calendar_view {
+        .o_calendar_widget {
+            .fc-dayGridYear-view {
+                >.fc-month-container {
+                    border-color: $border-color_5 !important;
+                    background-color: $background-color_3 !important;
+                    border-radius: 5px !important;
+                }
+            }
+        }
+    }
+
+    .o_pivot_view {
+        .o_content {
+            .o_pivot.table-responsive {
+                margin: 2rem;
+                padding: 0;
+                border-radius: 5px;
+                background-color: $background-color_1 !important;
+                box-shadow: 0 2px 4px rgba(38, 60, 85, 0.16) !important;
+                width: auto;
+                display: inline-block;
+            }
+        }
+    }
+
+    .o_activity_type_cell {
+        color: $color_2 !important;
+    }
+
+    .o_activity_record {
+        color: $color_2 !important;
+    }
+
+    .o_graph_view {
+        .o_content {
+            background-color: $background-color_3 !important;
+        }
+    }
+
+    .o_graph_renderer {
+        canvas {
+            background-color: $background-color_3 !important;
+        }
+    }
+
+    .o_pivot {
+        .table-hover {
+            >tbody {
+                >tr {
+                    &:hover {
+                        >td {
+                            color: $color_1 !important;
+                        }
+
+                        >th {
+                            color: $color_2 !important;
+                        }
+                    }
+
+                    th:hover {
+                        color: $color_1 !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .modal-content {
+        background-color: $background-color_3 !important;
+        color: $color_2 !important;
+    }
+
+    .modal-header {
+        border-bottom: 1px solid #5b739c !important;
+    }
+
+    .modal-footer {
+        border-top: 1px solid #5b739c !important;
+    }
+
+    .o_spreadsheet_dashboard_action {
+        .o_renderer {
+            .o-spreadsheet {
+                .o-grid {
+                    background-color: $background-color_1 !important;
+
+                    .o-figure-wrapper {
+                        .o-scorecard {
+                            background-color: $background-color_2 !important;
+
+                            .o-baseline-text {
+                                .o-baseline-text-description {
+                                    color: $color_2 !important;
+                                }
+
+                                .o-baseline-text-value {
+                                    color: $color_2 !important;
+                                }
+                            }
+
+                            .o-title-text {
+                                color: $color_2 !important;
+                            }
+
+                            .o-key-text {
+                                color: $color_1 !important;
+                            }
+                        }
+
+                        .o-figure-canvas.chartjs-render-monitor {
+                            background-color: $background-color_2 !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .o_base_settings {
+        .o_setting_container {
+            .settings {
+                background-color: $background-color_1 !important;
+
+                >.app_settings_block {
+                    h2 {
+                        background-color: $background-color_3 !important;
+                        color: $color_2 !important;
+                    }
+
+                    .h2 {
+                        background-color: $background-color_3 !important;
+                        color: $color_2 !important;
+                    }
+                }
+            }
+
+            .settings_tab {
+                background-color: $background-color_2 !important;
+
+                .tab {
+                    color: $color_2 !important;
+                }
+
+                .selected {
+                    background-color: $background-color_4 !important;
+                }
+            }
+        }
+    }
+
+    .o_setting_box {
+        .o_form_label {
+            color: $color_2 !important;
+        }
+
+        span {
+            color: $color_2 !important;
+        }
+    }
+
+    .o_view_nocontent {
+        background-image: radial-gradient(at 50% 50%, #1C222F 0px, rgba(0, 0, 0, 0.3) 100%) !important;
+
+        .o_nocontent_help {
+            >p {
+                &:first-of-type {
+                    color: $color_2 !important;
+                }
+            }
+        }
+    }
+
+    .o_view_sample_data {
+        .o_nocontent_help {
+            background-color: $background-color_1 !important;
+            box-shadow: 0 0 120px 100px #1C222F;
+            color: $color_2 !important;
+        }
+    }
+
+    .ou-navigation-button-container {
+        background-color: $background-color_3 !important;
+        color: $color_2 !important;
+        border-color: $border-color_5 !important;
+
+        .ou-clickable-button {
+            background-color: $background-color_2 !important;
+        }
+    }
+}
