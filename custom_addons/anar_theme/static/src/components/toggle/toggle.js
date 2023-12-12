@@ -1,8 +1,9 @@
 /** @odoo-module **/
 
 
-import { Component, onMounted } from "@odoo/owl";
+import { Component, onMounted, onWillStart, useState } from "@odoo/owl";
 import { registry } from "@web/core/registry";
+import { loadCSS } from "@web/core/assets";
 
 
 export class ThemeToggle extends Component {
@@ -10,8 +11,10 @@ export class ThemeToggle extends Component {
     setup() {
         super.setup();
 
+        this.dark_mode = useState({ value: false })
+
         onMounted(() => {
-            document.body.classList.add('white-theme')
+            document.body.classList.add('light-theme')
         })
     }
 
@@ -19,11 +22,18 @@ export class ThemeToggle extends Component {
     toggleTheme() {
         const body = document.body
 
-        if (body.classList.contains('white-theme'))
-            body.classList.replace('white-theme', 'dark-theme')
+        // enable dark_mode
+        if (!this.dark_mode.value) {
+            body.classList.replace('light-theme', 'dark-theme')
+            this.dark_mode.value = true
+        }
 
-        else if (body.classList.contains('dark-theme'))
-            body.classList.replace('dark-theme', 'white-theme')
+        // disable dark_mode
+        else {
+            body.classList.replace('dark-theme', 'light-theme')
+            this.dark_mode.value = false
+        }
+
     }
 
 }
