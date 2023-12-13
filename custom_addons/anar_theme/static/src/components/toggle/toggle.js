@@ -1,9 +1,8 @@
 /** @odoo-module **/
 
 
-import { Component, onMounted, onWillStart, useState } from "@odoo/owl";
+import { Component, onMounted, useState } from "@odoo/owl";
 import { registry } from "@web/core/registry";
-import { loadCSS } from "@web/core/assets";
 
 
 export class ThemeToggle extends Component {

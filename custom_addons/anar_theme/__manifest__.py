@@ -6,7 +6,7 @@
     'license': 'LGPL-3',
     'summary': 'Anar Theme for Odoo ERP',
     'description': 'Customization for anita_theme_base & mnk_theme module',
-    'depends': ['anita_theme_base', 'mnk_theme'],
+    'depends': ['base', 'mnk_theme'],
     'category': 'Themes/Backend',
     'sequence': 1,
     'installable': True,
@@ -19,7 +19,10 @@
             'anar_theme/static/src/components/**/*',
 
             # Styles
+            # Dark mode
             'anar_theme/static/src/scss/dark_mode.scss',
+            # For fixing overlaps with other styles
+            'anar_theme/static/src/scss/fix.scss',
 
         ],
     }
