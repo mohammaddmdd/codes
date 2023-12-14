@@ -18,7 +18,7 @@
                     <span class="switch__icon-part switch__icon-part--9"></span>
                 </span>
 
-                <input t-on-click="toggleTheme" class="switch__input" type="checkbox" role="switch" />
+                <input t-ref="input" t-on-click="toggleTheme" class="switch__input" type="checkbox" role="switch" />
 
                 <span class="switch__icon switch__icon--dark">
                     <span class="switch__icon-part switch__icon-part--1">

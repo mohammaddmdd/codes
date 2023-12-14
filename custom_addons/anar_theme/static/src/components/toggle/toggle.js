@@ -1,7 +1,7 @@
 /** @odoo-module **/
 
 
-import { Component, onMounted, useState } from "@odoo/owl";
+import { Component, onMounted, useState, useRef } from "@odoo/owl";
 import { registry } from "@web/core/registry";
 
 
@@ -10,11 +10,31 @@ export class ThemeToggle extends Component {
     setup() {
         super.setup();
 
-        this.dark_mode = useState({ value: false })
+        this.input = useRef('input')
+        this.darkTheme = useState({ value: this.getThemeMode() })
 
         onMounted(() => {
-            document.body.classList.add('light-theme')
+            this.initializeTheme()
         })
+    }
+
+    getThemeMode() {
+        const darkMode = localStorage.getItem('darkMode')
+        return darkMode === 'true'
+    }
+
+    initializeTheme() {
+        const body = document.body
+
+        if (!this.darkTheme.value) {
+            body.classList.add('light-theme')
+            this.input.el.checked = false
+        }
+
+        else {
+            body.classList.add('dark-theme')
+            this.input.el.checked = true
+        }
     }
 
     // used in toggle.xml
@@ -22,17 +42,19 @@ export class ThemeToggle extends Component {
         const body = document.body
 
         // enable dark_mode
-        if (!this.dark_mode.value) {
+        if (!this.darkTheme.value) {
             body.classList.replace('light-theme', 'dark-theme')
-            this.dark_mode.value = true
+            this.darkTheme.value = true
         }
 
         // disable dark_mode
         else {
             body.classList.replace('dark-theme', 'light-theme')
-            this.dark_mode.value = false
+            this.darkTheme.value = false
         }
 
+        // update theme mode in local storage
+        localStorage.setItem('darkMode', this.darkTheme.value)
     }
 
 }
