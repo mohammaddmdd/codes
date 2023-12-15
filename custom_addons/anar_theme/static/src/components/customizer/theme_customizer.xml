@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-inherit="anita_theme_base.customizer" t-inherit-mode="extension"  owl="1">
+
+        <xpath expr="//span" position="replace">
+            <span class="fa fa-lg fa-globe"/>
+        </xpath>
+
+    </t>
+
+</templates>
