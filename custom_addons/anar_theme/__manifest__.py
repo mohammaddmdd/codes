@@ -12,6 +12,10 @@
     'installable': True,
     'application': True,
 
+    'data': [
+        "views/login_style1.xml",
+    ],
+
     'assets': {
         'web.assets_backend': [
 
@@ -25,5 +29,12 @@
             'anar_theme/static/src/scss/fix.scss',
 
         ],
+
+        'web.assets_frontend': [
+
+            # Login page
+            'anar_theme/static/css/login/style1/login.css'
+
+        ]
     }
 }

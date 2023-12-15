@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+
+    <data>
+
+        <record id="inherited_login_style1" model="ir.ui.view">
+            <field name="inherit_id" ref="anita_login.login_style1"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//a[@target='_blank']" position="replace">
+                    <span class="power-red">
+                        Powered by
+                        <a href="https://aradware.ir" target="_blank">aradware.ir</a>
+                    </span>
+                </xpath>
+
+            </field>
+        </record>
+
+    </data>
+
+</odoo>
