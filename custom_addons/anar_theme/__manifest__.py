@@ -20,6 +20,8 @@
         'web.assets_backend': [
 
             # Components
+            # for fixing missing module error when inheriting component
+            'anita_theme_base/static/src/components/customizer/**/*',
             'anar_theme/static/src/components/**/*',
 
             # Styles
