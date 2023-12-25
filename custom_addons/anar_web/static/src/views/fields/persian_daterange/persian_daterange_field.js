@@ -7,6 +7,7 @@ import { luxonToMoment } from "@web/core/l10n/dates";
 import { useService } from "@web/core/utils/hooks";
 import { registry } from "@web/core/registry";
 import { onWillStart, useExternalListener, useRef, useEffect } from "@odoo/owl";
+import { moduleName } from "../../../config";
 
 export class PersianDateRangeField extends DateRangeField {fonts
 
@@ -19,11 +20,11 @@ export class PersianDateRangeField extends DateRangeField {fonts
         useExternalListener(window, "scroll", this.onWindowScroll, { capture: true });
 
         onWillStart(async () => {
-            await loadJS("/arad_jalali_toolkit/static/lib/jalali_moment/jalali-moment.browser.js")
-            await loadJS('/arad_jalali_toolkit/static/lib/persian-daterangepicker-1.0.0/dateragepicker.js')
-            await loadCSS('/arad_jalali_toolkit/static/lib/persian-daterangepicker-1.0.0/dateragepicker.css')
+            await loadJS('/' + moduleName + '/static/lib/jalali_moment/jalali-moment.browser.js')
+            await loadJS('/' + moduleName + '/static/lib/persian-daterangepicker-1.0.0/dateragepicker.js')
+            await loadCSS('/' + moduleName + '/static/lib/persian-daterangepicker-1.0.0/dateragepicker.css')
 
-            await loadJS('/arad_jalali_toolkit/static/lib/persian-date/persian-date.min.js')
+            await loadJS('/' + moduleName + '/static/lib/persian-date/persian-date.min.js')
         })
 
         useEffect(
