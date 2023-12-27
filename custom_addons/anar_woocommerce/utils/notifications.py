@@ -1,4 +1,3 @@
-from odoo import _
 from odoo.http import request
 from ..conf import WOOCOMMERCE_NOTIFICATION_TIMEOUT
 
